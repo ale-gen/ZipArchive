@@ -4,19 +4,23 @@
 import PackageDescription
 
 let package = Package(
-    name: "ZipArchive",
+    name: "SSZipArchive",
     platforms: [
-        .iOS(.v9),
-        .tvOS(.v9),
-        .macOS(.v10_10),
-        .watchOS(.v2),
+        .iOS(.v11),
+        .tvOS(.v11),
+        .macOS(.v10_13),
+        .watchOS(.v4),
     ],
     products: [
-        .library(name: "ZipArchive", targets: ["ZipArchive"]),
+        .library(
+            name: "SSZipArchive",
+            type: .dynamic,
+            targets: ["SSZipArchive"]
+        ),
     ],
     targets: [
         .target(
-            name: "ZipArchive",
+            name: "SSZipArchive",
             path: "SSZipArchive",
             cSettings: [
                 .define("HAVE_INTTYPES_H"),
