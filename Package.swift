@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "SSZipArchive",
     platforms: [
-        .iOS(.v11),
+        .iOS(.v13),
         .tvOS(.v11),
         .macOS(.v10_13),
         .watchOS(.v4),
